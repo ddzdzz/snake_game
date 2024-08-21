@@ -1,0 +1,40 @@
+:root{
+    --page-bg: #ffeaea;
+    --txt-bg: #B3EEAA;
+    --txt-color: #316D46;
+  }
+  
+  body{
+    background: var(--page-bg);
+    color: var(--txt-color);
+    font-size:1.1rem;
+  }
+  
+  .instructions{
+    background:var(--txt-bg);
+  }
+  
+  #cvsBg {
+    background:var(--txt-bg);
+    max-width:500px;
+    max-height:500px;
+    border-style: solid;
+  }
+  
+  #title{
+    max-width:600px;
+  }
+  
+  h1{
+    color:var(--page-bg);
+    font-family: 'Sarpanch', sans-serif;
+    background: var(--txt-color);
+    padding-bottom:0.7%;
+    font-size: 2rem;
+  }
+  
+  .input-group-text {
+      color: var(--txt-color);
+      background:none;
+      border: none;
+  }

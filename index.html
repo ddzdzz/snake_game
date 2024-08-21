@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2 Player Snake Game</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Sarpanch:wght@800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="https://cdn.glitch.com/e9d49224-0c52-42d8-928a-f582d90fe474%2Fsnake_favicon.png?v=1611025480263" />
+    <!-- scripts -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container mt-lg-4">
+      <div class="row justify-content-around">
+        <!-- game area - left column-->
+        <div
+          class="col justify-content-end px-0 text-center order-2 order-lg-1" id="cvsBg">
+          <canvas height="500" width="500" id="gameArea">
+            Sorry, your browser doesn't support the &lt;canvas&gt; element.
+          </canvas>
+        </div>
+
+        <!-- right column -->
+        <div class="col px-0 order-1 order-lg-2">
+          <!-- top - game title img -->
+          <div id="title" class="mx-sm-5 mx-lg-2 mx-xl-5">
+            <img class="img-fluid" src="https://cdn.glitch.com/e9d49224-0c52-42d8-928a-f582d90fe474%2Fsnake%20title.png?v=1592249581498" alt="Snake game" />
+          </div>
+
+          <!-- middle - instructions -->
+          <div class="mx-sm-5 mx-lg-2 mx-xl-5 mb-3 mb-xl-4 pb-1 instructions">
+            <h1 class="text-center">How to play</h1>
+            <ul>
+              <li>Player 1 controls: <strong>W,A,S,D</strong></li>
+              <li>Player 2 controls: <strong>arrow keys</strong></li>
+              <li>
+                The snake grows each time it eats. Each food is worth 1 point.
+              </li>
+              <li>
+                The game ends when a snake runs into itself or the other snake.
+                The player with the most points wins!
+              </li>
+            </ul>
+          </div>
+
+          <!-- middle - customization -->
+          <div class="mx-sm-5 mx-lg-2 mx-xl-5 instructions " id="customization">
+            <h1 class="text-center">Customize your game</h1>
+            <ul>
+              <li>
+                <div class="form-inline">
+                  <label for="p1color">P1 Snake color: </label>
+                  <input class="mx-1" type="color" id="p1color" value="#31cf2b" />
+                  <label for="p1eye">P1 Eye color: </label>
+                  <input class="mx-1" type="color" id="p1eye" value="#ff0000" />
+                </div>
+              </li>
+              <li>
+                <div class="form-inline">
+                  <label for="p2color">P2 Snake color: </label>
+                  <input class="mx-1" type="color" id="p2color" value="#4287f5" />
+                  <label for="p2eye">P2 Eye color: </label>
+                  <input class="mx-1" type="color" id="p2eye" value="#ff0000" />
+                </div>
+              </li>
+              <li>
+                <label for="speed">Snake speed:</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">fast</span>
+                  </div>
+                  <input type="range" id="speed" min="1" max="5" value="3" aria-label="Snake speed (1 is fastest and 5 is slowest)"/>
+                  <div class="input-group-append">
+                    <span class="input-group-text">slow</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
